@@ -3,7 +3,7 @@
 ## A project to convert a word into a NATO Phonetic Alphabet list.<br /> 
 
 This Project is based on list & dictionary comprehension. A pdf is attached 
-to the project so that if anyone is interested to know about the NATO 
+to the project for anyone who is interested to know about the NATO 
 phonetics.</br> </br>
 
 ![NATO Alphabet](image.jpg) <br /> <br />
