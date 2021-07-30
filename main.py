@@ -10,5 +10,5 @@ while not end_program:
     if user_input == "EXIT":
         end_program = True
     else:
-        nato_alphabets = [value for each_letter in user_input for key, value in df_dict.items() if each_letter in key]
+        nato_alphabets = [df_dict[letter] for letter in user_input]
         print(nato_alphabets)
