@@ -10,5 +10,9 @@ while not end_program:
     if user_input == "EXIT":
         end_program = True
     else:
-        nato_alphabets = [df_dict[letter] for letter in user_input]
-        print(nato_alphabets)
+        try:
+            nato_alphabets = [df_dict[letter] for letter in user_input]
+        except KeyError:
+            print("Sorry, only letters in the alphabet please!")
+        else:
+            print(nato_alphabets)
