@@ -4,15 +4,16 @@ data = pd.read_csv("nato_phonetic_alphabet.csv")
 
 df_dict = {row.letter: row.code for (index, row) in data.iterrows()}
 
-end_program = False
-while not end_program:
+
+def generate_alphabets():
     user_input = input("Enter a word: ").upper()
-    if user_input == "EXIT":
-        end_program = True
+    try:
+        nato_alphabets = [df_dict[letter] for letter in user_input]
+    except KeyError:
+        print("Sorry, only letters in the alphabet please!")
+        generate_alphabets()
     else:
-        try:
-            nato_alphabets = [df_dict[letter] for letter in user_input]
-        except KeyError:
-            print("Sorry, only letters in the alphabet please!")
-        else:
-            print(nato_alphabets)
+        print(nato_alphabets)
+
+
+generate_alphabets()
